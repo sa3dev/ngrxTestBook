@@ -1,0 +1,40 @@
+<div >
+
+  <h2 class="is-size-2">Test</h2>
+  <button class="button"> Get Data </button>
+
+  <nav class="pagination is-rounded " role="navigation" aria-label="pagination">
+
+    <a class="pagination-previous" (click)="decrementPage()" >Previous</a>
+    <a class="pagination-next" (click)="incrementPage()" >Next page</a>
+    <ul class="pagination-list">
+
+      <ng-container *ngFor="let item of [1 , 2 , 3] ; let index ;">
+
+         <li >
+          <a class="pagination-link is-rounded" [class]="( item === currentpage ) ? 'is-current' : '' " (click)="gotToPage(item)" >{{ item }} </a>
+        </li>
+      </ng-container>
+      
+    </ul>
+  </nav>
+
+</div>
+<div class="columns">
+  <div class="column">
+    <div class="column" *ngFor="let item of (tab2$ | async)" >
+      <p class="is-size-4">{{ item.title }}  <br><small> ( {{ item.id }} )</small> </p>
+      <p>{{ item.saleInfo.country }}</p>
+      <p>{{ item.volumeInfo.printType  }}</p>
+      <p>{{ (item.saleInfo.listPrice) ? item.saleInfo.listPrice.amount +' ' +item.saleInfo.listPrice.currencyCode  : ''   }} </p>
+      <hr>
+    </div>
+  </div>
+  <!-- <div class="column">
+    <div class="column" *ngFor="let item of (tab$ | async)" >
+      <p>{{ item.id }}</p>
+      <hr>
+    </div>
+  </div> -->
+
+</div>

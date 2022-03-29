@@ -1,0 +1,16 @@
+
+<div class="countView">
+    <h2>
+        Current Count: {{ count$ | async }}
+    </h2>
+</div>
+
+<div class="listBtn">
+
+    <button (click)="increment()">Increment</button>
+
+    <button (click)="decrement()">Decrement</button>
+
+    <button (click)="reset()">Reset Counter</button>
+
+</div>

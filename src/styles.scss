@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+
+html {
+    // font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.book-item {
+    padding: 1rem;
+    margin: 1rem;
+    // font-size: 1.5rem;
+    border: 1px solid firebrick;
+}
+

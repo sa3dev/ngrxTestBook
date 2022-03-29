@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex-direction: column;
+
+    width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid goldenrod;
+
+    .countView {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .listBtn {
+        display: flex;
+        justify-content: space-between;
+    }
+}
